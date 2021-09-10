@@ -1,7 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Counter() {
     const [count, setCounter] = useState(0)
+
+    useEffect(() => {
+        console.log(count)
+    }, [count])
+
+
     return (
         <div>
             <p>{count}</p>
